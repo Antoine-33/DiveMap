@@ -40,6 +40,7 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
 
             .header-profil {
                 padding-bottom: 30px;
+                margin-bottom: 4%;
             }
 
             .profil-title {
@@ -51,6 +52,30 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
                 margin: 4%;
             }
 
+            .show-block {
+                display: flex;
+                justify-content: center;
+            }
+            .site-frame{
+                width: 35%;
+                margin: 3%;
+                padding: 10px;
+                box-shadow: 5px 5px 10px #323232;
+            }
+
+            .site-title {
+                width: 80%;
+                margin: auto;
+                padding-bottom: 10px;
+                margin-bottom: 3%;
+            }
+
+            .img-site {
+                width: 80%;
+                padding-bottom: 10px;
+                overflow: hidden;
+                height: 17vh;
+            }
 
         </style>
     </head>
@@ -102,6 +127,16 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
 
         </div>
         <h4 class="m-3">Vos Sites de plongées préférés</h4>
+        <div class="show-block">
+            <div class="site-frame">
+                <h4 class="border-bottom site-title">Hortense</h4>
+                <img src="../IMAGES/hortense.jpg" alt="hortense bassin d'arcachon" class="img-site border-bottom">
+            </div>
+            <div class="site-frame">
+                <h4 class="border-bottom site-title">Le Port de la Vigne</h4>
+                <img src="../IMAGES/port-vigne.jpg" alt="port de la vigne" class="img-site border-bottom">
+            </div>
+        </div>
     </div>
 
     </body>

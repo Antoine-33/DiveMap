@@ -150,8 +150,10 @@ if (isset($_SESSION['id'])) {
                 <input type="password" class="form-control" id="editPassword2" name="editPassword2"
                        placeholder="Confirmez votre nouveau Mot de Passe">
             </div>
-            <button type="submit" class="btn btn-success" name="updateBtn">Submit</button>
+            <button type="submit" class="btn btn-success" name="updateBtn">Modifier</button
+
         </form>
+        <a href="../index.php" class="btn btn-danger m-4">Annuler</a>
     </div>
 
     </body>
