@@ -15,7 +15,9 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
         <title>DiveMap / Inscription</title>
 
         <title>Navbar</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+              crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/styles.css">
         <style>
             .alert-send {
@@ -55,7 +57,8 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="../index.php">DiveMap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -68,9 +71,15 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
     <?php if (isset($message)) {
         echo '<h3 class="alert-send">' . $message . '</h3>';
     } ?>
@@ -82,11 +91,10 @@ if (isset($_GET['id']) AND $_GET['id'] > 0) {
 
     <div class="container text-center">
         <div class="header-profil border-bottom">
-        <h3 class="text-center m-auto profil-title">Bienvenue <?php echo $userInfo['username'] ?></h3>
-        <img src="../IMAGES/diver.png" class="img-profile">
-        <br>
-            <?php if (isset($_SESSION['id']) AND $userInfo['id'] == $_SESSION['id'])
-            { ?>
+            <h3 class="text-center m-auto profil-title">Bienvenue <?php echo $userInfo['username'] ?></h3>
+            <img src="../IMAGES/diver.png" class="img-profile"><!-- future avatar-->
+            <br>
+            <?php if (isset($_SESSION['id']) AND $userInfo['id'] == $_SESSION['id']) { ?>
                 <a href="edit_profil.php" class="btn btn-success m-3 edit">Editer mon Profil</a>
                 <a href="deconnexion.php" class="btn btn-danger m-3 edit">Déconnexion</a>
             <?php } ?>

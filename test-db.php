@@ -20,7 +20,17 @@ haut(time());
 <br>
 
 <?php
-
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=DiveMap', 'utest', '');
+$places_count = 1;
+while ($places_count <= 4) {
+    $places = $bdd->query('SELECT placeName, placeLat, placeLon FROM places WHERE id="' . $places_count . '"');
+    while ($data = $places->fetch()) {
+        echo $data['placeName'].'<br>';
+        echo $data['placeLat'].'<br>';
+        echo $data['placeLon'].'<br>';
+    }
+    $places_count++;
+}
 
 
 
