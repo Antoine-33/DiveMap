@@ -140,3 +140,39 @@ var marker = L.marker([44.630716, -1.244348], {icon: myIconG}).addTo(mymap);
                 marker.bindPopup("Test");
 
 
+
+
+// Pour boucle
+
+function getPlaces() {
+    $bdd = new PDO('mysql:host=127.0.0.1;dbname=DiveMap', 'utest', '');
+    $req = $bdd->prepare('SELECT * FROM places WHERE id = ?');
+    $req->execute(array());
+    return $req;
+}
+
+$count = $bdd->query('SELECT count(id) from places')->fetchColumn();
+$places_count = 0;
+while($places_count < $count){
+  $req = $bdd->prepare('SELECT placeName, placeLat, placeLon FROM places WHERE id = "'.$places_count.'"');
+  $data = $places->fetch(PDO::FETCH_OBJ); ?>
+
+      <?= $data->placeName ?>
+    <?= $data->placeLat ?>
+    <?= $data->placeLon ?>
+
+  <?php
+  $places_count++;
+}
+
+  $bdd = new PDO('mysql:host=127.0.0.1;dbname=DiveMap', 'utest', '');
+  $places_count = 1;
+  while ($places_count <= 4) {
+      $places = $bdd->query('SELECT placeName, placeLat, placeLon FROM places WHERE id="' . $places_count . '"');
+      while ($data = $places->fetch()) {
+          echo $data['placeName'].'<br>';
+          echo $data['placeLat'].'<br>';
+          echo $data['placeLon'].'<br>';
+      }
+      $places_count++;
+  }

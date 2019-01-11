@@ -17,7 +17,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">Connexion</a>
+            <a class="nav-item nav-link" href="Logs/connexion.php">Connexion</a>
             <a class="nav-item nav-link" href="places.php">Ajouter un site</a>
         </div>
     </div>
