@@ -1,0 +1,13 @@
+{"status":200,
+"callCount":0,
+"copyright":"Tidal data retrieved from www.worldtide.info. Copyright (c) 2014-2017 Brainware LLC. Licensed for use of individual spatial coordinates on behalf of\/by an end-user. Source data created by the Center for Operational Oceanographic Products and Services (CO-OPS) and is not subject to copyright protection. NO GUARANTEES ARE MADE ABOUT THE CORRECTNESS OF THIS DATA. You may not use it if anyone or anything could come to harm as a result of using it (e.g. for navigational purposes).",
+"requestLat":33.768321,
+"requestLon":-118.195617,
+"responseLat":33.7517,
+"responseLon":-118.227,
+"atlas":"NOAA",
+"station":"Long Beach",
+ Terminal Island",
+"heights":[{"dt":1412272800,
+"date":"2014-10-02T18:00+0000",
+"height":0.02}]}
